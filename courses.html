@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnEasy - Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="web-icon.jpg">
+    <style>
+        body {
+            background: url('login_background.png') no-repeat center center;
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 100vh;
+            color: white;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        body::before {
+            background: rgba(0, 0, 0, 0.3); /* Lighter overlay */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <span class="web-icon">📚</span>
+                <h1>LearnEasy</h1>
+            </a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li id="auth-link"><a href="login.html">Login</a></li>
+                <li id="profile-link" class="profile">
+                    <span class="username">
+                        <span class="profile-icon">👤</span>
+                    </span>
+                    <div class="profile-dropdown">
+                        <a href="candidate-details.html">Candidate Details</a>
+                        <a href="your-courses.html">Your Courses</a>
+                        <a href="javascript:void(0)" onclick="logout()">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="notification" class="notification"></div>
+        <section class="courses">
+            <h2>Available Courses</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="html.png" alt="HTML5 Logo" class="course-img">
+                    <h3>HTML Basics</h3>
+                    <p>Build your first webpage with HTML.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="css.png" alt="CSS3 Logo" class="course-img">
+                    <h3>CSS Styling</h3>
+                    <p>Make your websites beautiful with CSS.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="js.png" alt="JavaScript Logo" class="course-img">
+                    <h3>JavaScript Essentials</h3>
+                    <p>Add interactivity with JavaScript.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="Python.png" alt="Python Logo" class="course-img">
+                    <h3>Python Programming</h3>
+                    <p>Learn the basics of Python for automation and more.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="C++.png" alt="C++ Logo" class="course-img">
+                    <h3>C++ Fundamentals</h3>
+                    <p>Master C++ for high-performance applications.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="Java.png" alt="Java Logo" class="course-img">
+                    <h3>Java Development</h3>
+                    <p>Build robust applications with Java.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="React.png" alt="React Logo" class="course-img">
+                    <h3>React for Beginners</h3>
+                    <p>Create dynamic UIs with React.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="node.png" alt="Node.js Logo" class="course-img">
+                    <h3>Node.js Basics</h3>
+                    <p>Build scalable backend apps with Node.js.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="Sql.png" alt="PostgreSQL Logo" class="course-img">
+                    <h3>SQL with PostgreSQL</h3>
+                    <p>Manage databases using SQL and PostgreSQL.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="Gitnub.png" alt="GitHub Logo" class="course-img">
+                    <h3>Git & GitHub</h3>
+                    <p>Master version control with Git and GitHub.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="C.png" alt="C Logo" class="course-img">
+                    <h3>C Programming</h3>
+                    <p>Learn the fundamentals of C programming.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="R.png" alt="R Logo" class="course-img">
+                    <h3>R for Data Science</h3>
+                    <p>Analyze data with R programming.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="Ruby.png" alt="Ruby Logo" class="course-img">
+                    <h3>Ruby Basics</h3>
+                    <p>Explore web development with Ruby.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="C_sharp.png" alt="C# Logo" class="course-img">
+                    <h3>C# Programming</h3>
+                    <p>Develop applications with C#.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="Linux.png" alt="Linux Logo" class="course-img">
+                    <h3>Linux Essentials</h3>
+                    <p>Get started with Linux and command-line tools.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="ML.png" alt="Machine Learning Logo" class="course-img">
+                    <h3>Machine Learning Basics</h3>
+                    <p>Introduction to ML with Python and scikit-learn.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="Cyber-security.png" alt="Cybersecurity Icon" class="course-img">
+                    <h3>Cybersecurity Fundamentals</h3>
+                    <p>Learn the basics of securing systems and networks.</p>
+                    <button class="btn" onclick="checkLogin()">Enroll Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9257aa93da666748',t:'MTc0MjgzNTAxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'925b9ff57a9a454c',t:'MTc0Mjg3NjUyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

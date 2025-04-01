@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnEasy - Your Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="web-icon.jpg">
+    <style>
+        body {
+            background: url('login_background.png') no-repeat center center;
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 100vh;
+            color: white;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        body::before {
+            background: rgba(0, 0, 0, 0.3); /* Lighter overlay */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link"><span class="web-icon">📚</span><h1>LearnEasy</h1></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li id="auth-link"><a href="login.html">Login</a></li>
+                <li id="profile-link" class="profile">
+                    <span class="username"><span class="profile-icon">👤</span></span>
+                    <div class="profile-dropdown">
+                        <a href="candidate-details.html">Candidate Details</a>
+                        <a href="your-courses.html" class="active">Your Courses</a>
+                        <a href="javascript:void(0)" onclick="logout()">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="notification" class="notification"></div>
+        <section class="courses">
+            <h2>Your Enrolled Courses</h2>
+            <div id="enrolled-courses" class="course-grid">
+                <p class="no-courses">You have not enrolled in any courses yet.</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
